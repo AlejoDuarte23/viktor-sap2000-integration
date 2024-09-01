@@ -48,7 +48,7 @@ def create_frame(sap_object:any, Nodes:dict, Elements:dict, material = 'R1'):
                                        node_j["y"],
                                        node_j["z"],
                                        str(line_id),
-                                       material,
+                                       dict_vals["sap_sec_id"],
                                         '1',
                                         'Global'
                                         )
