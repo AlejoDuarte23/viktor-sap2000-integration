@@ -37,19 +37,30 @@ class PySap2000():
             pythoncom.CoUninitialize() 
 
 def create_frame(sap_object:any, Nodes:dict, Elements:dict, material = 'R1'):
+
+    for key , vals in Nodes.items():
+        sap_object.PointObj.AddCartesian(vals['x'], vals['y'], vals['z'], " ",str(key)) 
+
+        
     for line_id, dict_vals in Elements.items():
         node_i = Nodes[dict_vals["start"]]
         node_j = Nodes[dict_vals["end"]]
 
-        sap_object.FrameObj.AddByCoord(node_i["x"],
-                                       node_i["y"],
-                                       node_i["z"],
-                                       node_j["x"],
-                                       node_j["y"],
-                                       node_j["z"],
-                                       str(line_id),
-                                       dict_vals["sap_sec_id"],
-                                        '1',
+        # sap_object.FrameObj.AddByCoord(node_i["x"],
+        #                                node_i["y"],
+        #                                node_i["z"],
+        #                                node_j["x"],
+        #                                node_j["y"],
+        #                                node_j["z"],
+        #                                str(line_id),
+        #                                dict_vals["sap_sec_id"],
+        #                                 '1',
+        #                                 'Global'
+        #                                 )
+        sap_object.FrameObj.AddByPoint (str(dict_vals["start"]),
+                                        str(dict_vals["end"]),
+                                        str(line_id),
+                                        dict_vals["sap_sec_id"],
                                         'Global'
                                         )
         

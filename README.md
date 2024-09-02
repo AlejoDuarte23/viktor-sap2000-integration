@@ -2,14 +2,13 @@
 
 This app integrates SAP2000 with the Viktor platform, allowing users to create and visualize parametric models directly in SAP2000.
 
-
 ![Workflow](reference/thumbnail.png)
 
 ## Features
 
 - **Parametric Frame Geometry**: Define and visualize frame geometry with customizable dimensions.
+- **Model Modification**: Updates the material, cross-section, and asssigns support on nodes.
 - **SAP2000 Model Creation**: Generate a new SAP2000 model with specified parameters like height, width, and the number of diagonals.
-- **Material Assignment**: Automatically assigns concrete material properties to the generated frame.
 - **3D Visualization**: Render the frame geometry in a 3D view within the Viktor platform.
 
 ## Requirements

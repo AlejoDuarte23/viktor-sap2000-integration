@@ -1,5 +1,4 @@
 from typing import Tuple, List
-# https://lh4.googleusercontent.com/proxy/CKuYsVdsrnD1A-wPc-fFlNqiU0AMzoF8oZQ8q-1fyWUi76o8qN60kiM19sAdmo12_DeP5qV-d4X7aUpIBf-jc3D6EDOOnN8C8LAyKpfjO_rsW9yQ47ImKocujoNXhXVa-06g3KHoYN43ceW54Q
 
 class TowerColumn():
     def __init__(self, height:float, width:float, n_diagonals:int):
